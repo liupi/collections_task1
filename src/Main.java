@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Stream;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         List<Employee> employees = readFile().stream()
@@ -19,15 +16,15 @@ public class Main {
 
         System.out.println("Size of collection: " + employees.size());
 
-        System.out.println("Print employees using foreach loop");
+        System.out.println("\nPrint employees using foreach loop:");
         employees.forEach(System.out::println);
 
-        System.out.println("Print employees using standard loop");
+        System.out.println("\nPrint employees using standard loop:");
         for (Employee employee : employees) {
             System.out.println(employee);
         }
 
-        System.out.println("Print employees using Iterator interface");
+        System.out.println("\nPrint employees using Iterator interface:");
         for (Iterator<Employee> iterator = employees.iterator(); iterator.hasNext(); ) {
             Employee next = iterator.next();
             System.out.println(next);
