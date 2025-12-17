@@ -28,7 +28,6 @@ public class Main {
             Employee next = iterator.next();
             System.out.println(next);
         }
-
     }
 
     private static List<String> readFile() {
